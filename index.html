@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="content-grid">
+      <div class="card-previews">
+        <div class="card-front">
+          <img
+            class="card-front__bg"
+            src="./images/bg-card-front.png"
+            alt="backgroung_image"
+          />
+          <img
+            class="card-front__logo"
+            src="./images/card-logo.svg"
+            alt="logo"
+          />
+          <span class="card-front__number" id="output-number">0000 0000 0000 0000</span>
+          <span class="card-front__name" id="output-name">Jane Appleseed</span>
+          <p class="card-front__expiry"><span class="mm">mm</span> / <span class="yy">yy</span></p>
+        </div>
+
+        <div class="card-back">
+          <img
+            class="card-back__bg"
+            src="./images/bg-card-back.png"
+            alt="card_back"
+          />
+          <span class="card-back__cvc" id="output-cvc">123</span>
+        </div>
+      </div>
+
+      <form class="form" aria-label="cardholder_form" id="card-info">
+        <label id="cardholdernamelabel" for="cardholder_name"
+        name="cardholder name"
+          >cardholder name</label
+        >
+        <input
+          type="text"
+          name="cardholder_name"
+          id="cardholder_name"
+          autofocus
+          title="Full Name"
+          placeholder="e.g. Jane Appleseed"
+          aria-describedby="cardholdernameinstructions"
+          aria-labelledby="cardholdernamelabel"
+        />
+        <p id="cardholdernameinstructions">
+          Wrong format - fullname must spaced out e.g firstname lastname
+        </p>
+
+        <label id="cardnumberlabel" for="card_number">card number</label>
+        <input
+          id="card_number"
+          type="text"
+          title="Card Number"
+          placeholder="e.g. 1234 5678 9123 0000"
+          aria-describedby="cardnumberinstructions"
+          aria-labelledby="cardnumberlabel"
+          autocomplete="cc-number"
+        />
+        <p id="cardnumberinstructions">
+          wrong format, numbers only
+        </p>
+        <div class="input-group">
+          <div class="group">
+            <label id="expirationdatelabel" for="expiration_month"
+              >Exp. Date (MM/YY)</label
+            >
+            <div class="expdateinputs" id="exprdatescontainer">
+              <input
+                id="expiration_month"
+                type="text"
+                placeholder="MM"
+                title="Expiration Month"
+                maxlength="2"
+                aria-describedby="expirationdateinstruction"
+                aria-labelledby="expirationdatelabel"
+                autocomplete="bday-month"
+              />
+              <input
+                id="expiration_year"
+                type="text"
+                title="Expiration year"
+                placeholder="YY"
+                maxlength="2"
+                aria-describedby="expirationdateinstruction"
+                aria-labelledby="expirationdatelabel"
+              />
+            </div>
+            <p id="expirationdateinstruction">
+              Can't be blank
+            </p>
+          </div>
+
+          <div class="group">
+            <label id="cardcvclabel" for="card_cvc">cvc</label>
+            <input
+              id="card_cvc"
+              type="text"
+              title="Cvc Number"
+              placeholder="e.g. 123"
+              maxlength="3"
+              aria-describedby="cardcvcinstructions"
+              aria-labelledby="cardcvclabel"
+            />
+            <p id="cardcvcinstructions">
+              Can't be blank
+            </p>
+          </div>
+        </div>
+
+        <button class="btn" type="submit" title="confirm" id="submitbtn">
+          Confirm
+        </button>
+      </form>
+
+      <div class="thankyoupage" aria-label="thank_you_page" id="thankyou">
+        <img src="./images/icon-complete.svg" alt="complete_icon" />
+        <h1>Thank you!</h1>
+        <h2>We've added your card details</h2>
+        <button class="btn">Continue</button>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
