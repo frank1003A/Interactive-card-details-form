@@ -309,6 +309,11 @@ img {
   top: 40%;
 }
 
+#exprdatescontainer {
+  display: flex;
+  gap: .5rem;
+}
+
 @media (min-width: 960px) {
   .card-previews {
     display: grid;
