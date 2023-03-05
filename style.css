@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
 :root {
-  /* either --dark-mode or --no-dark-mode */
-  --color-scheme: var(--dark-mode);
 
   --font-family: "Space Grotesk", sans-serif;
   --fs-400: 1rem;
@@ -34,10 +32,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html {
-  color-scheme: var(--color-scheme);
 }
 
 body {
